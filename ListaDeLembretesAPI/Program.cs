@@ -1,5 +1,6 @@
 using ListaDeLembretesAPI.Context;
 using Microsoft.EntityFrameworkCore;
+using ListaDeLembretesAPI.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("LembretesDb"));
+
 
 var app = builder.Build();
 
