@@ -38,8 +38,9 @@ namespace ListaDeLembretesAPI.Controllers
                 return lembretes;
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Problema no tratamento da solicitação");
             }
@@ -58,8 +59,9 @@ namespace ListaDeLembretesAPI.Controllers
                 }
                 return lembrete;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Problema no tratamento da solicitação");
             }
@@ -77,8 +79,9 @@ namespace ListaDeLembretesAPI.Controllers
                 return new CreatedAtRouteResult("ObterLembretePeloId",
                     new { id = lembrete.LembreteId }, lembrete);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Problema no tratamento da solicitação");
             }
@@ -102,12 +105,33 @@ namespace ListaDeLembretesAPI.Controllers
                 return Ok();
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Problema no tratamento da solicitação");
 
             }
+        }
+
+        [HttpGet("lembretesPorData")]
+        public ActionResult<IEnumerable<List<Lembrete>>> GetGroupedByDate()
+        {
+            try
+            {
+                var lembretesPorData = _context.Lembretes.OrderBy(l => l.Data).GroupBy(l => l.Data).
+                                Select(group => group.ToList()).ToList();
+
+                return lembretesPorData;
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Problema no tratamento da solicitação");
+            }
+
         }
     }
 }
