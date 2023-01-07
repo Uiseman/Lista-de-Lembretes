@@ -24,6 +24,7 @@ var mappingConfig = new MapperConfiguration(mc =>
 IMapper mapper = mappingConfig.CreateMapper();
 
 builder.Services.AddSingleton(mapper);
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -37,6 +38,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseCors(opt => opt.AllowAnyOrigin().AllowAnyHeader());
 app.MapControllers();
 
 app.Run();

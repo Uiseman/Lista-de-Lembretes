@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "12.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "Microsoft.AspNetCore.Components": "6.0.12",
           "Microsoft.EntityFrameworkCore.Design": "7.0.1",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.1",
           "Swashbuckle.AspNetCore": "6.2.3"
@@ -46,6 +47,40 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authorization/6.0.12": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "6.0.12",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authorization.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.1222.57109"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components/6.0.12": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "6.0.12",
+          "Microsoft.AspNetCore.Components.Analyzers": "6.0.12"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.1222.57109"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/6.0.12": {},
+      "Microsoft.AspNetCore.Metadata/6.0.12": {
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Metadata.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.1222.57109"
           }
         }
       },
@@ -350,6 +385,34 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authorization/6.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BkHiJ7krAgsK/OfIz71ZL/ckrxBbeMtA+CDJwFNn0gq+UlmiPpxLBojBlkQCwExiEA+mnYCbwsHfnhcpq7zOXw==",
+      "path": "microsoft.aspnetcore.authorization/6.0.12",
+      "hashPath": "microsoft.aspnetcore.authorization.6.0.12.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components/6.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DFzaPaHcqV2IEzOxPDV38lWJrY4SRinwfbxk5MY+oUJ0DyRetJlSdwsuWsAo9nFxgfoRvib/TElMMrOGbO3CLg==",
+      "path": "microsoft.aspnetcore.components/6.0.12",
+      "hashPath": "microsoft.aspnetcore.components.6.0.12.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/6.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uavhr7DPJLkz320YAMthKZXZlt2dryvmPvMECg7/kgW/9w/XmHDwhoWRG4ztGJmVWK/yzAZKYEdcj4oA9VryoA==",
+      "path": "microsoft.aspnetcore.components.analyzers/6.0.12",
+      "hashPath": "microsoft.aspnetcore.components.analyzers.6.0.12.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Metadata/6.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5IvdbEG0vKr4AL7+JkKwV5V9Iwt1mWX4/vsbOWmGON3ldP3hb8rXJIhOA9K1NR1Lb6O2URnYyo2jaJw7yulXhw==",
+      "path": "microsoft.aspnetcore.metadata/6.0.12",
+      "hashPath": "microsoft.aspnetcore.metadata.6.0.12.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
