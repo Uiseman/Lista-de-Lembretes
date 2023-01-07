@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using ListaDeLembretesAPI.Validations;
 
 namespace ListaDeLembretesAPI.Models
 {
@@ -12,6 +13,7 @@ namespace ListaDeLembretesAPI.Models
         public string? Nome { get; set; }
 
         [Required]
+        [DataMaiorIgualDataAtualAttribute]
         public DateOnly Data { get; set; }
 
     }
