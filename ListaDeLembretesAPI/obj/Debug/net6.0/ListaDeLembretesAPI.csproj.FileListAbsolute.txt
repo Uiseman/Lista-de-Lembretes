@@ -46,3 +46,5 @@ C:\Users\55319\Desktop\Projetos Pessoais\Lista-de-Lembretes\ListaDeLembretesAPI\
 C:\Users\55319\Desktop\Projetos Pessoais\Lista-de-Lembretes\ListaDeLembretesAPI\obj\Debug\net6.0\ListaDeLembretesAPI.pdb
 C:\Users\55319\Desktop\Projetos Pessoais\Lista-de-Lembretes\ListaDeLembretesAPI\obj\Debug\net6.0\ListaDeLembretesAPI.genruntimeconfig.cache
 C:\Users\55319\Desktop\Projetos Pessoais\Lista-de-Lembretes\ListaDeLembretesAPI\obj\Debug\net6.0\ref\ListaDeLembretesAPI.dll
+C:\Users\55319\Desktop\Projetos Pessoais\Lista-de-Lembretes\ListaDeLembretesAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\55319\Desktop\Projetos Pessoais\Lista-de-Lembretes\ListaDeLembretesAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

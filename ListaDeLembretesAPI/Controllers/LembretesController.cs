@@ -1,4 +1,6 @@
+using AutoMapper;
 using ListaDeLembretesAPI.Context;
+using ListaDeLembretesAPI.DTOs;
 using ListaDeLembretesAPI.Models;
 using ListaDeLembretesAPI.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +12,12 @@ namespace ListaDeLembretesAPI.Controllers
     public class LembretesController : Controller
     {
         private readonly IUnitOfWork? _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public LembretesController(IUnitOfWork? unitOfWork)
+        public LembretesController(IUnitOfWork? unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
 
@@ -64,10 +68,11 @@ namespace ListaDeLembretesAPI.Controllers
 
         [HttpPost]
 
-        public ActionResult Post([FromBody] Lembrete lembrete)
+        public ActionResult Post([FromBody] LembreteDTO lembreteDto)
         {
             try
             {
+                var lembrete = _mapper.Map<Lembrete>(lembreteDto);
                 _unitOfWork.LembreteRepository.Add(lembrete);
                 _unitOfWork.Commit();
                 return new CreatedAtRouteResult("ObterLembretePeloId",

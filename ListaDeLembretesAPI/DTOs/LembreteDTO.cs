@@ -1,13 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using ListaDeLembretesAPI.Validations;
 
-namespace ListaDeLembretesAPI.Models
+namespace ListaDeLembretesAPI.DTOs
 {
-    public class Lembrete
+    public class LembreteDTO
     {
-
-        [Key]
-        public int LembreteId { get; set; }
 
         [Required]
         [StringLength(80, ErrorMessage = "Tamanho deve ser no máximo 80 caracteres")]
@@ -16,6 +13,5 @@ namespace ListaDeLembretesAPI.Models
         [Required]
         [DataMaiorIgualDataAtualAttribute]
         public DateOnly Data { get; set; }
-
     }
 }
