@@ -1,5 +1,6 @@
 using ListaDeLembretesAPI.Context;
 using ListaDeLembretesAPI.Models;
+using ListaDeLembretesAPI.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ListaDeLembretesAPI.Controllers
@@ -8,11 +9,11 @@ namespace ListaDeLembretesAPI.Controllers
     [Route("[controller]")]
     public class LembretesController : Controller
     {
-        private readonly AppDbContext? _context;
+        private readonly IUnitOfWork? _unitOfWork;
 
-        public LembretesController(AppDbContext contexto)
+        public LembretesController(IUnitOfWork? unitOfWork)
         {
-            _context = contexto;
+            _unitOfWork = unitOfWork;
         }
 
 
@@ -22,7 +23,7 @@ namespace ListaDeLembretesAPI.Controllers
         {
             try
             {
-                var lembretes = _context.Lembretes.ToList();
+                var lembretes = _unitOfWork.LembreteRepository.Get().ToList();
 
                 if (lembretes is null)
                 {
@@ -45,7 +46,7 @@ namespace ListaDeLembretesAPI.Controllers
         {
             try
             {
-                var lembrete = _context.Lembretes.FirstOrDefault(l => l.LembreteId == id);
+                var lembrete = _unitOfWork.LembreteRepository.GetById(l => l.LembreteId == id);
                 if (lembrete is null)
                 {
                     return NotFound("Lembrete não encontrado");
@@ -67,8 +68,8 @@ namespace ListaDeLembretesAPI.Controllers
         {
             try
             {
-                _context.Lembretes.Add(lembrete);
-                _context.SaveChanges();
+                _unitOfWork.LembreteRepository.Add(lembrete);
+                _unitOfWork.Commit();
                 return new CreatedAtRouteResult("ObterLembretePeloId",
                     new { id = lembrete.LembreteId }, lembrete);
             }
@@ -87,13 +88,13 @@ namespace ListaDeLembretesAPI.Controllers
         {
             try
             {
-                var lembrete = _context.Lembretes.FirstOrDefault(l => l.LembreteId == id);
+                var lembrete = _unitOfWork.LembreteRepository.GetById(l => l.LembreteId == id);
                 if (lembrete is null)
                 {
                     return NotFound("Lembrete não localizado");
                 }
-                _context.Lembretes.Remove(lembrete);
-                _context.SaveChanges();
+                _unitOfWork.LembreteRepository.Delete(lembrete);
+                _unitOfWork.Commit();
 
                 return Ok();
 
@@ -112,8 +113,7 @@ namespace ListaDeLembretesAPI.Controllers
         {
             try
             {
-                var lembretesPorData = _context.Lembretes.OrderBy(l => l.Data).GroupBy(l => l.Data).
-                                Select(group => group.ToList()).ToList();
+                var lembretesPorData = _unitOfWork.LembreteRepository.GetGroupedByDate().ToList();
 
                 return lembretesPorData;
             }
