@@ -1,6 +1,6 @@
 ## Lista-de-Lembretes
 
-Solução fullstack para criar e excluir lembretes
+Solução fullstack para criar e excluir lembretes.
 
 ## REQUISITOS
 
