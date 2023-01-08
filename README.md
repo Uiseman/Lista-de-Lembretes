@@ -1,4 +1,4 @@
-## Lista-de-Lembretes
+# Lista-de-Lembretes
 
 Solução fullstack para criar e excluir lembretes
 
@@ -10,9 +10,15 @@ Solução fullstack para criar e excluir lembretes
 
 Clonar os reposítórios correspondentes ao <a href=https://github.com/Uiseman/Lista-de-Lembretes>Backend</a> e ao <a href=https://github.com/Uiseman/Frontend-Lista-de-Lembretes>Frontend</a> da aplicação.
 
-Dentro da pasta ListaDeLembretesAPI executar o comando dotnet run.
+## Execução do Backend
 
-Na primeira execução do frontend, é necessário executar o comando npm install no diretório do projeto. Após a instalação dos pacotes, a aplicação será executada via npm start.
+Dentro da pasta ListaDeLembretesAPI executar o comando **dotnet run**. Caso desejar que o Swagger seja inicializado, executar o comando **dotnet watch run**
+
+## Execução do Frontend
+
+Na primeira execução do frontend, é necessário executar o comando **npm install** no diretório do projeto, para que os pacotes necessários para o funcionamento da aplicação sejam instalados. 
+
+Após a isso, a aplicação será executada via **npm start**.
 
 # SOBRE A APLICAÇÃO
 
