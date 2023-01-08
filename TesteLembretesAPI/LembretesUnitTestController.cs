@@ -78,7 +78,7 @@ namespace Testes
 
         [Fact]
 
-        public void GetLembrete_Return_CorrectResult()
+        public void GetLembrete_Return_Correct_Result()
         {
             var Controller = new LembretesController(repository, mapper);
 
@@ -150,9 +150,38 @@ namespace Testes
             var lembreteC = new LembreteDTO()
             { Nome = "Lembrete Teste3", Data = new DateOnly(2025, 5, 5) };
 
+            Controller.Post(lembreteA);
+            Controller.Post(lembreteB);
+            Controller.Post(lembreteC);
+
             var data = Controller.GetGroupedByDate();
 
             Assert.IsType<List<List<Lembrete>>>(data.Value);
+
+        }
+
+        [Fact]
+        public void GetGroupedByDate_Return_Corrext_Order()
+        {
+
+            var Controller = new LembretesController(repository, mapper);
+
+            var lembreteA = new LembreteDTO()
+            { Nome = "Lembrete Teste", Data = new DateOnly(2025, 6, 5) };
+            var lembreteB = new LembreteDTO()
+            { Nome = "Lembrete Teste2", Data = new DateOnly(2025, 4, 5) };
+            var lembreteC = new LembreteDTO()
+            { Nome = "Lembrete Teste3", Data = new DateOnly(2025, 5, 5) };
+
+            Controller.Post(lembreteA);
+            Controller.Post(lembreteB);
+            Controller.Post(lembreteC);
+
+            var data = Controller.GetGroupedByDate();
+
+            var listaLembretes = data.Value.Should().BeAssignableTo<List<List<Lembrete>>>().Subject;
+            Assert.Equal(lembreteB.Data, listaLembretes[0][0].Data);
+
 
         }
 
