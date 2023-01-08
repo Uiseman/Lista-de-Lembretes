@@ -16,7 +16,7 @@ Dentro da pasta ListaDeLembretesAPI executar o comando **dotnet run**. Caso dese
 
 ### Execução do Frontend
 
-Na primeira execução do frontend, é necessário executar o comando **npm install** no diretório do projeto, para que os pacotes necessários para o funcionamento da aplicação sejam instalados. 
+Na primeira execução do frontend, é necessário executar o comando **npm install** no diretório do projeto(Frontend-Lista-de-Lembretes), para que os pacotes necessários para o funcionamento da aplicação sejam instalados. 
 
 Após a isso, a aplicação será executada via **npm start**.
 
@@ -27,3 +27,4 @@ O frontend tem a capacidade de criar, listar e excluir os lembretes. Essas funci
 ## ARMAZENAMENTO
 
 A aplicação utiliza um banco de dados persistido na memória. Ou seja, ele é apagado toda vez que a API é reiniciada.
+
