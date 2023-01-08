@@ -22,7 +22,7 @@ Após a isso, a aplicação será executada via **npm start**.
 
 ## SOBRE A APLICAÇÃO
 
-O frontend tem a capacidade de criar, listar e excluir os lembretes. Essas funcionalidades são disponibilizadas por meio da API REST ListaDeLembretesAPI. Os endpoints disponibilizados podem ser vizualizados por meio do Swagger. Para isso, no diretório da api deve-se executar o comando dotnet watch run.
+O frontend tem a capacidade de criar, listar e excluir os lembretes. Essas funcionalidades são disponibilizadas por meio da API REST ListaDeLembretesAPI. Os endpoints disponibilizados, assim como o parâmetros de envio e retorno, podem ser vizualizados por meio do Swagger.
 
 ## ARMAZENAMENTO
 
