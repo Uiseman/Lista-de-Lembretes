@@ -17,7 +17,7 @@ namespace ListaDeLembretesAPI.Validations
 
             if (DataEscolhida.CompareTo(DataAtual) <= 0)
             {
-                return new ValidationResult("Data escolhida deve ser posterior a data atual!");
+                return new ValidationResult("Data escolhida deve ser posterior a data atual.");
             }
 
             return ValidationResult.Success;
