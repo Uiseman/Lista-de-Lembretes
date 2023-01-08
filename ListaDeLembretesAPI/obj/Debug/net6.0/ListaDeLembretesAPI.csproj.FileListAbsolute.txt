@@ -101,3 +101,5 @@ C:\Users\55319\Desktop\Lista-de-Lembretes\ListaDeLembretesAPI\obj\Debug\net6.0\r
 C:\Users\55319\Desktop\Lista-de-Lembretes\ListaDeLembretesAPI\obj\Debug\net6.0\ListaDeLembretesAPI.pdb
 C:\Users\55319\Desktop\Lista-de-Lembretes\ListaDeLembretesAPI\obj\Debug\net6.0\ListaDeLembretesAPI.genruntimeconfig.cache
 C:\Users\55319\Desktop\Lista-de-Lembretes\ListaDeLembretesAPI\obj\Debug\net6.0\ref\ListaDeLembretesAPI.dll
+C:\Users\55319\Desktop\Lista-de-Lembretes\ListaDeLembretesAPI\bin\Debug\net6.0\DateOnlyTimeOnly.AspNet.dll
+C:\Users\55319\Desktop\Lista-de-Lembretes\ListaDeLembretesAPI\bin\Debug\net6.0\DateOnlyTimeOnly.AspNet.Swashbuckle.dll

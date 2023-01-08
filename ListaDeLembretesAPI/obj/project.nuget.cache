@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "D6AAf7mUge7oJ+8zxghYpW6kSAFEl5FlnWChxuY/7g/8ivCCGMnJfP8Eveo29hiUX4XNJKhlDUSb6d1Hlt4bbA==",
+  "dgSpecHash": "VrduSJBs9RGWiYqffwnFc4gvz/NDwXu71yGTjVuxV20I8nrIygmZ2sGuJDRL49hCibD3ikrg4nHHOvb7pyGSbQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\55319\\Desktop\\Lista-de-Lembretes\\ListaDeLembretesAPI\\ListaDeLembretesAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\55319\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\55319\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\55319\\.nuget\\packages\\dateonlytimeonly.aspnet\\2.0.0\\dateonlytimeonly.aspnet.2.0.0.nupkg.sha512",
+    "C:\\Users\\55319\\.nuget\\packages\\dateonlytimeonly.aspnet.swashbuckle\\2.0.0\\dateonlytimeonly.aspnet.swashbuckle.2.0.0.nupkg.sha512",
     "C:\\Users\\55319\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\55319\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.12\\microsoft.aspnetcore.authorization.6.0.12.nupkg.sha512",
     "C:\\Users\\55319\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.12\\microsoft.aspnetcore.components.6.0.12.nupkg.sha512",
