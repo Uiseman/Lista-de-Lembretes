@@ -46,6 +46,14 @@
               "target": "Package",
               "version": "[12.0.0, )"
             },
+            "DateOnlyTimeOnly.AspNet": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "DateOnlyTimeOnly.AspNet.Swashbuckle": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Microsoft.AspNetCore.Components": {
               "target": "Package",
               "version": "[6.0.12, )"
