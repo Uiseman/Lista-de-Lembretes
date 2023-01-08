@@ -5,10 +5,12 @@ Solução fullstack para criar e excluir lembretes
 É necessário possuir o SDK do .NET 6 instalado, assim como o Node.js e npm da versão LTS.
 
 # MODO DE USO
-Clonar os reposítórios correspondentes ao <a href=https://github.com/Uiseman/Lista-de-Lembretes>Backend</a> e ao <a href=https://github.com/Uiseman/Lista-de-Lembretes-Frontend>Frontend</a> da aplicação.
+Clonar os reposítórios correspondentes ao <a href=https://github.com/Uiseman/Lista-de-Lembretes>Backend</a> e ao <a href=https://github.com/Uiseman/Frontend-Lista-de-Lembretes>Frontend</a> da aplicação.
 
-No diretório do frontend, inicializar o terminal e executar o comando npm start;
+
 Dentro da pasta ListaDeLembretesAPI executar o comando dotnet run.
+
+Na primeira execução do frontend, é necessário executar o comando npm install no diretório do projeto. Após a instalação dos pacotes, a aplicação será executada via npm start.
 
 # SOBRE A APLICAÇÃO
 
